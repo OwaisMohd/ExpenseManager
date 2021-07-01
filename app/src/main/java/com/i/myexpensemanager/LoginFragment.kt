@@ -1,4 +1,6 @@
 package com.i.myexpensemanager
 
-class LoginFragment {
+import androidx.fragment.app.Fragment
+
+class LoginFragment : Fragment(){
 }

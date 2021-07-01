@@ -1,4 +1,6 @@
 package com.i.myexpensemanager
 
-class TransactionDetailFragment {
+import androidx.fragment.app.Fragment
+
+class TransactionDetailFragment: Fragment() {
 }

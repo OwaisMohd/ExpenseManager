@@ -1,4 +1,6 @@
 package com.i.myexpensemanager
 
-class SavedProfileFragment {
+import androidx.fragment.app.Fragment
+
+class SavedProfileFragment: Fragment() {
 }
