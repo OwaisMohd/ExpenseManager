@@ -6,7 +6,7 @@
     app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.i.myexpensemanager.LoginFragment"
+        android:name="com.i.myexpensemanager.ui.LoginAndSaved.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/dayTransactionFragment"
-        android:name="com.i.myexpensemanager.DayTransactionFragment"
+        android:name="com.i.myexpensemanager.ui.DayTransaction.DayTransactionFragment"
         android:label="fragment_day_transaction"
         tools:layout="@layout/fragment_day_transaction" >
         <action
@@ -24,11 +24,11 @@
     </fragment>
     <fragment
         android:id="@+id/monthlyDetailFragment"
-        android:name="com.i.myexpensemanager.MonthlyDetailFragment"
+        android:name="com.i.myexpensemanager.ui.MonthList.MonthlyDetailFragment"
         android:label="fragment_monthly_detail"
         tools:layout="@layout/fragment_monthly_detail" >
         <action
-            android:id="@+id/action_monthlyDetailFragment_to_transactionDetailFragment2"
+            android:id="@+id/action_monthlyDetailFragment_to_transactionDetailFragment"
             app:destination="@id/transactionDetailFragment" />
         <action
             android:id="@+id/action_monthlyDetailFragment_to_dayTransactionFragment"
@@ -37,7 +37,7 @@
             android:id="@+id/action_monthlyDetailFragment_to_savedProfileFragment"
             app:destination="@id/savedProfileFragment" />
         <action
-            android:id="@+id/action_monthlyDetailFragment_to_transactionListFragment"
+            android:id="@+id/action_monthlyDetailFragment_to_transactionListFragment2"
             app:destination="@id/transactionListFragment" />
         <argument
             android:name="dateMonth"
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/monthlyTransactionsFragment"
-        android:name="com.i.myexpensemanager.MonthlyTransactionsFragment"
+        android:name="com.i.myexpensemanager.ui.MonthList.MonthlyTransactionsFragment"
         android:label="fragment_monthly_transactions"
         tools:layout="@layout/fragment_monthly_transactions" >
         <action
@@ -54,7 +54,7 @@
     </fragment>
     <fragment
         android:id="@+id/savedProfileFragment"
-        android:name="com.i.myexpensemanager.SavedProfileFragment"
+        android:name="com.i.myexpensemanager.ui.LoginAndSaved.SavedProfileFragment"
         android:label="fragment_saved_profile"
         tools:layout="@layout/fragment_saved_profile" >
         <action
@@ -63,7 +63,7 @@
     </fragment>
     <fragment
         android:id="@+id/transactionDetailFragment"
-        android:name="com.i.myexpensemanager.TransactionDetailFragment"
+        android:name="com.i.myexpensemanager.ui.TransactionDetails.TransactionDetailFragment"
         android:label="fragment_transaction_detail"
         tools:layout="@layout/fragment_transaction_detail" >
         <argument
@@ -73,7 +73,7 @@
     </fragment>
     <fragment
         android:id="@+id/transactionListFragment"
-        android:name="com.i.myexpensemanager.TransactionListFragment"
+        android:name="com.i.myexpensemanager.ui.UpcomingTransactions.TransactionListFragment"
         android:label="fragment_transaction_list"
         tools:layout="@layout/fragment_transaction_list" >
         <action

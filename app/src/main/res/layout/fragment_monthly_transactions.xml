@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginBottom="56dp"
     android:background="@color/teal_light"
-    tools:context=".MonthlyTransactionsFragment">
+    tools:context=".ui.MonthList.MonthlyTransactionsFragment">
 
     <ScrollView
         android:layout_width="match_parent"
