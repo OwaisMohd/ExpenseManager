@@ -40,7 +40,7 @@ class TransactionAdapter(private val listener: (Long) -> Unit) :
         fun bind(transaction: Transaction) {
             with(transaction) {
 //                transaction_date.text=transaction.name
-                transaction_name.text = transaction.name
+                itemView.transaction_name.text = transaction.name
 //                itemView.transaction_date.text = "20/10/2020"
 
                 if (transaction.type.equals(0)) {

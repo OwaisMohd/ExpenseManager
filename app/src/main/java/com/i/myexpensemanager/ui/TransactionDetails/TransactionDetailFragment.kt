@@ -13,7 +13,6 @@ import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.i.myexpensemanager.R
-import com.i.myexpensemanager.TransactionDetailFragmentArgs
 import com.i.myexpensemanager.data.Transaction
 import com.i.myexpensemanager.data.TransactionType
 import kotlinx.android.synthetic.main.fragment_transaction_detail.*

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.i.myexpensemanager.R
 import com.i.myexpensemanager.data.MonthlyTransactions
 import kotlinx.android.extensions.LayoutContainer
+import kotlinx.android.synthetic.main.fragment_monthly_list.view.*
 
 class MonthlyCardAdapter(private val listener: (Long) -> Unit, val context: Context) :
         ListAdapter<MonthlyTransactions, MonthlyCardAdapter.ViewHolder>(
@@ -53,8 +54,8 @@ class MonthlyCardAdapter(private val listener: (Long) -> Unit, val context: Cont
 //                this.context.getSharedPreferences("Preference", Context.MODE_PRIVATE)
 //            var monthlyBudget = sharedPreferences.getFloat("Budget", 0f)
             with(monthlyTransactions) {
-                month_name.text = selectMonth(monthlyTransactions.month)
-                year_name.text = " " + monthlyTransactions.year.toString()
+                itemView.month_name.text = selectMonth(monthlyTransactions.month)
+                itemView.year_name.text = " " + monthlyTransactions.year.toString()
 //                Log.d("MonthlyCard", "aug: " + monthlyTransactions.sum + " " + monthlyBudget)
 //                if ((monthlyTransactions.sum * (-1)) > monthlyBudget) {
 ////                    budget_exceeded.text = "Budget Exceeded"
@@ -66,7 +67,7 @@ class MonthlyCardAdapter(private val listener: (Long) -> Unit, val context: Cont
 
                 val childLayoutManager = LinearLayoutManager(context, LinearLayout.VERTICAL, false)
                 childLayoutManager.initialPrefetchItemCount = 4
-                recyclerView2.apply {
+                itemView.recyclerView2.apply {
                     layoutManager = childLayoutManager
                     adapter = MonthAdapter(monthlyTransactions.children)
                     setRecycledViewPool(viewPool)

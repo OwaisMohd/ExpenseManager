@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.i.myexpensemanager.R
-import com.i.myexpensemanager.SavedProfileFragmentDirections
 import kotlinx.android.synthetic.main.fragment_saved_profile.*
 
 class SavedProfileFragment : Fragment() {

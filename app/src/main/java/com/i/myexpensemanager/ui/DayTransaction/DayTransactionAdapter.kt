@@ -44,10 +44,10 @@ class DayTransactionAdapter(private val listener: (String) -> Unit) :
 
         fun bind(transaction: Transaction) {
             with(transaction) {
-                transaction_name.text = transaction.name
-                transaction_date.text = transaction.date
-                transaction_amount.text = transaction.amount.toString()
-                transaction_mode.isVisible = false
+                itemView.transaction_name.text = transaction.name
+                itemView.transaction_date.text = transaction.date
+                itemView.transaction_amount.text = transaction.amount.toString()
+                itemView.transaction_mode.isVisible = false
 
 
                 if (transaction.plusMinus == 1) {
@@ -65,8 +65,8 @@ class DayTransactionAdapter(private val listener: (String) -> Unit) :
                     itemView.type_view.setBackgroundColor(Color.parseColor("#ff726f"))
 
                 }
-                textView3.visibility = View.INVISIBLE
-                dot.visibility = View.INVISIBLE
+                itemView.textView3.visibility = View.INVISIBLE
+                itemView.dot.visibility = View.INVISIBLE
             }
         }
     }

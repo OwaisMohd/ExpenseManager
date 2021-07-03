@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.i.myexpensemanager.MonthlyTransactionsFragmentDirections
 import com.i.myexpensemanager.R
 import kotlinx.android.synthetic.main.fragment_monthly_transactions.*
 
