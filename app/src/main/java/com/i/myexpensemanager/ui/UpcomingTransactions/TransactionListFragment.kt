@@ -1,8 +1,5 @@
 package com.i.myexpensemanager.ui.UpcomingTransactions
 
-import android.view.*
-import com.i.myexpensemanager.R.id.*
-
 import android.content.Context
 import android.content.SharedPreferences
 import android.graphics.Color
@@ -18,7 +15,9 @@ import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.i.myexpensemanager.R
+import com.i.myexpensemanager.R.id.*
 import kotlinx.android.synthetic.main.fragment_transaction_list.*
+
 
 class TransactionListFragment : Fragment() {
 
@@ -74,7 +73,7 @@ class TransactionListFragment : Fragment() {
         addAppBar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
 
-                profile-> {
+                profile -> {
                     findNavController().navigate(TransactionListFragmentDirections.actionTransactionListFragmentToSavedProfileFragment())
                     true
                 }
@@ -228,4 +227,5 @@ class TransactionListFragment : Fragment() {
         })
 
     }
+
 }
