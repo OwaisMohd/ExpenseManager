@@ -11,45 +11,32 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="2dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <View
-                android:id="@+id/type_view"
-                android:layout_width="5dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
-                android:background="#4CAF50"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginLeft="4dp" />
 
             <TextView
                 android:id="@+id/transaction_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/item1"
                 android:textColor="@android:color/black"
-                android:textSize="16sp"
 
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginLeft="16dp" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/transaction_date"
@@ -70,13 +57,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
                 android:text="Cash"
                 android:textColor="#000"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/transaction_date"
                 app:layout_constraintStart_toEndOf="@+id/transaction_date"
-                app:layout_constraintTop_toTopOf="@+id/transaction_date"
-                android:layout_marginLeft="24dp" />
+                app:layout_constraintTop_toTopOf="@+id/transaction_date" />
 
             <TextView
                 android:id="@+id/transaction_amount"
@@ -109,25 +96,38 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
                 android:text="+"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/transaction_amount"
                 app:layout_constraintEnd_toStartOf="@+id/transaction_amount"
-                app:layout_constraintTop_toTopOf="@+id/transaction_amount"
-                android:layout_marginRight="1dp" />
+                app:layout_constraintTop_toTopOf="@+id/transaction_amount" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:layout_marginStart="6dp"
+                android:layout_marginLeft="6dp"
                 android:background="@drawable/ic_baseline_arrow_right"
                 android:textSize="32sp"
                 app:layout_constraintBottom_toBottomOf="@+id/transaction_amount"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/transaction_amount"
-                app:layout_constraintTop_toTopOf="@+id/transaction_amount"
-                android:layout_marginLeft="6dp" />
+                app:layout_constraintTop_toTopOf="@+id/transaction_amount" />
+
+            <View
+                android:id="@+id/type_view"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="#4CAF50"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

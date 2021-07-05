@@ -7,25 +7,6 @@
     android:background="@color/teal_light"
     tools:context=".ui.TransactionDetails.TransactionDetailFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/addappBar10"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:menu="@menu/transaction_add"
-            app:title="Expense Manager" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -35,6 +16,72 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
+            <Button
+                android:id="@+id/expense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:backgroundTint="@color/FavRed"
+                android:text="Expense"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/income"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/income"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <Button
+                android:id="@+id/income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="@color/green"
+                android:text="income"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toStartOf="@+id/expense"
+                app:layout_constraintHorizontal_bias="0.301"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/comment" />
+
+
+            <CheckBox
+                android:id="@+id/recurring_transaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="16dp"
+                android:text="Recurring Transaction"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dateselect" />
+
+
+            <Spinner
+                android:id="@+id/_type"
+                android:layout_width="364dp"
+                android:layout_height="63dp"
+                android:layout_marginTop="16dp"
+                android:autofillHints="Select Transaction Type"
+                app:layout_constraintBottom_toBottomOf="@+id/selectcategory"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.489"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fromdate"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/selectcategory"
+                android:layout_width="22dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="28dp"
+                android:text=""
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.023"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fromdate" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/TransactionName"
@@ -57,7 +104,6 @@
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/etamount"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -78,7 +124,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
-
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/dateselect"
@@ -103,23 +148,13 @@
             </com.google.android.material.textfield.TextInputLayout>
 
 
-            <CheckBox
-                android:id="@+id/recurring_transaction"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="16dp"
-                android:text="Recurring Transaction"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dateselect"
-                android:layout_marginLeft="25dp" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/fromdate"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="152dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="16dp"
                 android:editable="false"
                 android:hint="From Date"
@@ -127,8 +162,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recurring_transaction"
-                app:startIconDrawable="@drawable/ic_baseline_calendar_today_24"
-                android:layout_marginLeft="25dp">
+                app:startIconDrawable="@drawable/ic_baseline_calendar_today_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -136,18 +170,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <Spinner
-                android:id="@+id/_type"
-                android:layout_width="364dp"
-                android:layout_height="63dp"
-                android:layout_marginTop="16dp"
-                android:autofillHints="Select Transaction Type"
-                app:layout_constraintBottom_toBottomOf="@+id/selectcategory"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.489"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fromdate"
-                app:layout_constraintVertical_bias="1.0" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/todate"
@@ -155,7 +177,9 @@
                 android:layout_width="152dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
                 android:editable="false"
                 android:hint="To Date"
                 app:layout_constraintBottom_toBottomOf="@+id/fromdate"
@@ -164,28 +188,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/fromdate"
                 app:layout_constraintVertical_bias="0.0"
-                app:startIconDrawable="@drawable/ic_baseline_calendar_today_24"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="25dp">
+                app:startIconDrawable="@drawable/ic_baseline_calendar_today_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
-            <TextView
-                android:id="@+id/selectcategory"
-                android:layout_width="22dp"
-                android:layout_height="53dp"
-                android:layout_marginTop="28dp"
-                android:text=""
-                android:textSize="25sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.023"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fromdate" />
-
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/transactiontype"
@@ -206,7 +215,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
-
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/comment"
@@ -230,36 +238,28 @@
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/expense"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
-                android:backgroundTint="@color/FavRed"
-                android:text="Expense"
-                android:textSize="25sp"
-                app:layout_constraintBottom_toBottomOf="@+id/income"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/income"
-                app:layout_constraintVertical_bias="0.0"
-                android:layout_marginRight="24dp" />
-
-            <Button
-                android:id="@+id/income"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:backgroundTint="@color/green"
-                android:text="income"
-                android:textSize="25sp"
-                app:layout_constraintEnd_toStartOf="@+id/expense"
-                app:layout_constraintHorizontal_bias="0.301"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/comment" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/addappBar10"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu="@menu/transaction_add"
+            app:title="Expense Manager" />
+
+    </com.google.android.material.appbar.AppBarLayout>
 
 </FrameLayout>

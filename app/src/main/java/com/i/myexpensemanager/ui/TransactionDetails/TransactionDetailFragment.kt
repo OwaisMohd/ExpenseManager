@@ -260,7 +260,6 @@ class TransactionDetailFragment : Fragment() {
     }
 
 
-
 //     yyyy-mm-dd
 
     //    for creating dialogue date picker

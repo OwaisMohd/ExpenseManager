@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import com.i.myexpensemanager.data.MonthlyTransactions
 import com.i.myexpensemanager.data.TransactionListRepository
 
-class MonthlyTransactionViewModel(application: Application): AndroidViewModel(application) {
+class MonthlyTransactionViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repo: TransactionListRepository = TransactionListRepository(application)
 
