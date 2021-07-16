@@ -198,15 +198,6 @@ class TransactionDetailFragment : Fragment() {
         val category = selectcategory.text.toString()
         val comment = comment.editText?.text.toString()
 
-////        creating sharedPreference to update the net_amount remaining
-//        val sharedPreferences: SharedPreferences =
-//            this.requireActivity().getSharedPreferences("login", Context.MODE_PRIVATE)
-//        val debit = sharedPreferences.getString("Budget", "0")
-//        val value = (debit?.toInt() ?: 0) - amount.toInt()
-//
-//        sharedPreferences.edit().putString("Budget", value.toString()).apply()
-
-//        sending values to the viewmodel
 
         val vary: Float = amount.toFloat() * (-1)
         val transaction = Transaction(

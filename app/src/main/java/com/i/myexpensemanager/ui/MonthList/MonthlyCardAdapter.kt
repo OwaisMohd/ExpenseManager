@@ -50,20 +50,9 @@ class MonthlyCardAdapter(private val listener: (Long) -> Unit, val context: Cont
 
         @SuppressLint("WrongConstant")
         fun bind(monthlyTransactions: MonthlyTransactions) {
-//            val sharedPreferences: SharedPreferences =
-//                this.context.getSharedPreferences("Preference", Context.MODE_PRIVATE)
-//            var monthlyBudget = sharedPreferences.getFloat("Budget", 0f)
             with(monthlyTransactions) {
                 itemView.month_name.text = selectMonth(monthlyTransactions.month)
                 itemView.year_name.text = " " + monthlyTransactions.year.toString()
-//                Log.d("MonthlyCard", "aug: " + monthlyTransactions.sum + " " + monthlyBudget)
-//                if ((monthlyTransactions.sum * (-1)) > monthlyBudget) {
-////                    budget_exceeded.text = "Budget Exceeded"
-////                    budget_exceeded.error = "Budget Exceeded"
-//                } else {
-////                    budget_exceeded.text = ""
-////                    budget_exceeded.error = null
-//                }
 
                 val childLayoutManager = LinearLayoutManager(context, LinearLayout.VERTICAL, false)
                 childLayoutManager.initialPrefetchItemCount = 4

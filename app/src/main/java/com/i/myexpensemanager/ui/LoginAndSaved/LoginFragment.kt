@@ -47,32 +47,6 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-//        val name=view.findViewById<TextInputLayout>(R.id.PersonName).editText.toString()
-//        val budget=view.findViewById<TextInputLayout>(R.id.PersonBudget).toString()
-//        val income=view.findViewById<TextInputLayout>(R.id.PersonIncome).toString()
-//        var islogin=sharedPreferences.getBoolean("isLogin", false)
-//
-//        if(islogin==true){
-//            findNavController().navigate(
-//                LoginFragmentDirections.actionLoginFragmentToTransactionListFragment()
-//            )
-//        }
-
-
-//        if(name!=null && budget!=null && income!=null){
-//            saveCredentials(name, budget, income)
-//            println("name =$name budget= $budget ")
-//
-//
-//        continueButton.setOnClickListener {
-//
-//
-//            findNavController().navigate(
-//                LoginFragmentDirections.actionLoginFragmentToTransactionListFragment()
-//            )
-//        }
-//            }
-
 
         // one time login using text Watcher with this method we can enable and disable button
         PersonName.editText?.addTextChangedListener(boardingTextWatcher)
